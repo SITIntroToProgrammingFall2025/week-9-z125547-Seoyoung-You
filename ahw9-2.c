@@ -1,18 +1,17 @@
 #include <stdio.h>
 
 int main() {
-    int arr[ARRAY_SIZE];
-    int i, j;     
-    int temp;       
+    int i, j;
+    int temp;
 
-    for (i = 0; i < ARRAY_SIZE; i++) {
+    for (i = 0; i < 5; i++) {
         if (scanf("%d", &arr[i]) != 1) {
             return 1;
         }
     }
 
-    for (i = 0; i < ARRAY_SIZE - 1; i++) {
-        for (j = 0; j < ARRAY_SIZE - 1 - i; j++) {
+    for (i = 0; i < 5 - 1; i++) {
+        for (j = 0; j < 5 - 1 - i; j++) {
             if (arr[j] > arr[j + 1]) {
                 temp = arr[j];
                 arr[j] = arr[j + 1];
@@ -22,9 +21,9 @@ int main() {
     }
 
     printf("sorted array:\n");
-    for (i = 0; i < ARRAY_SIZE; i++) {
+    for (i = 0; i < 5; i++) {
         printf("%d", arr[i]);
-        if (i < ARRAY_SIZE - 1) {
+        if (i < 5 - 1) {
             printf(" ");
         }
     }
@@ -32,4 +31,5 @@ int main() {
 
     return 0;
 }
+
 
